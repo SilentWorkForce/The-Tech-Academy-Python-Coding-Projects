@@ -8,7 +8,6 @@ fName = 'drill4.txt'
 fPath = 'D:\\PyDrill\\'
 
 abPath = os.path.join(fPath, fName)
-
 print(abPath)
 
 time = os.path.getmtime('D:\PyDrill\drill4.txt')
