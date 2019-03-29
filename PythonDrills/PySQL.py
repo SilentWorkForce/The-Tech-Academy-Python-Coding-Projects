@@ -37,11 +37,8 @@ conn.close()
 
 conn = sqlite3.connect('Drill.db')
 
-with conn:
-    cur = conn.cursor()
-    cur.execute("select col_fileName,col_fileType FROM tbl_project WHERE col_fileType = '.txt'")
-    varProject = cur.fetchall()
-    for item in varProject:
-        msg = 'File Name: {}\nFile Type: {}'.format(item[0],item[1])
-    print(msg)
+for file in os.listdir('D:\\Drill\\'):
+    if file.endswith(".txt"):
+        print(os.path.join("/Drill", file,))
+
 
