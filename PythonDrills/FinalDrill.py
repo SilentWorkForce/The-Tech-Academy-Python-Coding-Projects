@@ -36,13 +36,30 @@ class ParentWindow(Frame):
         dir = filedialog.askdirectory()
         self.txtSearch.insert(END, dir)
         print(dir)
+        import os
+        files = os.listdir('C:\PyProjects')
+        print(files)
+        time = os.path.getmtime('C:\PyProjects')
+        print(time)
+        for file in os.listdir('C:\\PyProjects\\'):
+            if file.endswith(".txt"):
+                print(os.path.join,("/PyProjects", file,))
+        path = 'C:\PyProjects'
+        name_list = os.listdir(path)
+        full_list = [os.path.join(path,i) for i in name_list]
+        time_sorted_list = sorted(full_list, key=os.path.getmtime)
+
+        print (time_sorted_list)
 
 
 
+       
     def select(self):
         source = join('C', 'PyProjects', 'Drill5.txt', 'Drill6.txt', 'Drill7.txt')
         destination = join('D', 'Final')
         shutil.move(source, destination)
+
+
 
         
 ##        source = os.listdir("C:/PyProjects/")
