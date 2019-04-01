@@ -30,8 +30,6 @@ class ParentWindow(Frame):
     def submit(self):
         dir = filedialog.askdirectory()
         self.txtSearch.insert(END, dir)
-        print(dir)
-        import os
         files = os.listdir('C:\PyProjects')   
         time = os.path.getmtime('C:\PyProjects')
         for file in os.listdir('C:\\PyProjects\\'):
@@ -45,15 +43,26 @@ class ParentWindow(Frame):
 
        
     def select(self):
-        source = join('C', 'PyProjects', 'Drill5.txt', 'Drill6.txt', 'Drill7.txt')
-        destination = join('D', 'Final')
-        shutil.move(source, destination)
+        path = 'C:\PyProjects'
+        shutil.copy('C:/PyProjects/Py1.txt','C:/PyProjects/Py2.txt')
+        shutil.move('D:/Final')
+        for files in path:
+                 if files.endswith(".txt"):
+                     shutil.copy(files,destination)
 
+  
+
+
+
+##                        TEST CODE
+##        source = join('C', 'PyProjects', 'Drill5.txt', 'Drill6.txt', 'Drill7.txt')
+##        destination = join('D', 'Final')
+##        shutil.move(source, destination)
         
 ##        source = os.listdir("C:/PyProjects/")
 ##        destination = ("D:/Final/")
-##        shutil.copy('C:/PyProjects/Drill4.txt','C:/PyProjects/Drill5.txt')
-##        shutil.move(r'C:/PyProjects/Drill4.txt','C:/PyProjects/Drill5.txt')
+##        shutil.copy('C:/PyProjects/Drill6.txt','C:/PyProjects/Drill7.txt')
+##        shutil.move(r'C:/PyProjects/Drill6.txt','C:/PyProjects/Drill7.txt')
 ##        for files in source:
 ##            if files.endswith(".txt"):
 ##                shutil.copy(files,destination)
