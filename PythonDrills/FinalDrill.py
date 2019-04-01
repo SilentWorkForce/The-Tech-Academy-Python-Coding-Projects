@@ -46,10 +46,7 @@ class ParentWindow(Frame):
         name_list = os.listdir(path)
         full_list = [os.path.join(path,i) for i in name_list]
         time_sorted_list = sorted(full_list, key=os.path.getmtime)
-
         print (time_sorted_list)
-
-
 
        
     def select(self):
@@ -58,6 +55,10 @@ class ParentWindow(Frame):
         shutil.move(source, destination)
 
 
+for file in os.listdir('C:\PyProjects'):
+    if file.endswith('.txt'):
+        print(os.path.join("/PyProjects", file,))
+     
 
         
 ##        source = os.listdir("C:/PyProjects/")
@@ -68,18 +69,6 @@ class ParentWindow(Frame):
 ##            if files.endswith(".txt"):
 ##                shutil.copy(files,destination)
         
-
-
-
-for file in os.listdir('C:\PyProjects'):
-    if file.endswith('.txt'):
-        print(os.path.join("/PyProjects", file,))
-     
-
-
-
-
-
 
 
 
