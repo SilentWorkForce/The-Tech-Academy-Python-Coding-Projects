@@ -37,10 +37,8 @@ class ParentWindow(Frame):
         self.txtSearch.insert(END, dir)
         print(dir)
         import os
-        files = os.listdir('C:\PyProjects')
-        print(files)
+        files = os.listdir('C:\PyProjects')   
         time = os.path.getmtime('C:\PyProjects')
-        print(time)
         for file in os.listdir('C:\\PyProjects\\'):
             if file.endswith(".txt"):
                 print(os.path.join,("/PyProjects", file,))
