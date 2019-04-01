@@ -49,12 +49,6 @@ class ParentWindow(Frame):
         destination = join('D', 'Final')
         shutil.move(source, destination)
 
-
-for file in os.listdir('C:\PyProjects'):
-    if file.endswith('.txt'):
-        print(os.path.join("/PyProjects", file,))
-     
-
         
 ##        source = os.listdir("C:/PyProjects/")
 ##        destination = ("D:/Final/")
